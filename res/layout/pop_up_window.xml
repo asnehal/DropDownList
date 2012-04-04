@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/PopUpView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#a1a1a1">
+
+	<ListView android:id="@+DropDownList/dropDownList"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:divider="#000"
+	    android:dividerHeight="0.5dp"></ListView>
+</LinearLayout>

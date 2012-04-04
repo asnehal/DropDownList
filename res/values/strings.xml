@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, PopUpWindowTrialActivity!</string>
+    <string name="app_name">Drop Down List Demo</string>
+    <string name="select_string">Select an item</string>
+
+</resources>
