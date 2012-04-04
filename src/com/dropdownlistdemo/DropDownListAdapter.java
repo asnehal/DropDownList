@@ -21,7 +21,7 @@ public class DropDownListAdapter extends BaseAdapter {
 	private static int selectedCount = 0;
 	private static String firstSelected = "";
 	private ViewHolder holder;
-	private static String selected = "";
+	private static String selected = "";	//shortened selected values representation
 	
 	public static String getSelected() {
 		return selected;
@@ -74,6 +74,8 @@ public class DropDownListAdapter extends BaseAdapter {
 		holder.tv.setText(mListItems.get(position));
 
 		final int position1 = position;
+		
+		//whenever the checkbox is clicked the selected values textview is updated with new selected values
 		holder.chkbox.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -90,6 +92,10 @@ public class DropDownListAdapter extends BaseAdapter {
 		return convertView;
 	}
 
+
+	/*
+	 * Function which updates the selected values display and information(checkSelected[])
+	 * */
 	private void setText(int position1){
 		if (!DropDownListDemo.checkSelected[position1]) {
 			DropDownListDemo.checkSelected[position1] = true;
