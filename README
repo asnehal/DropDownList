@@ -1,0 +1,28 @@
+Drop-down list is a common UI feature used when we have to select one or more values from a list.
+Android SDK provides Spinner widget for implementing drop-down list. But Spinner is limited to single value selection.
+So, if we need multi-select drop-down list, it can be done using Pop-up window and multi-select ListView.
+
+DropDownList is a simple implementation of Multi-select drop-down list.
+Here, I have used:
+1) A TextView : To display selected values and also which acts as anchor view for drop down
+2) A Button : To display/hide the drop-down list
+3) A Pop-up Window : This is used to represent the drop-down list
+4) A ListView : To display the list of values
+
+How it is done? 
+
+1) First the TextView and Button are set up 
+2) When the button is clicked, the drop-down list (pop-up window) is displayed:
+   The properties of pop-up window are set such that it will be informed of the touch events outside its window.
+          
+          pw.setBackgroundDrawable(new BitmapDrawable());   
+          pw.setOutsideTouchable(true);
+  
+   TextView is given as anchor view for this pop-up window.
+   The ListView is populated with the data source provided.
+3) Whenever a value is selected in the list, the TextView is updated with new selected values.
+   This is done by maintaining select/unselect information about each value in form of boolean[] 'checkSelecte[]'
+4) The TextView displays the selected values in two representations:
+    i) Shortened representation: e.g. 'Item 1 & 2 more'
+    ii) Complete list of selected values
+    These representations can be alternatively when the TextView is clicked
